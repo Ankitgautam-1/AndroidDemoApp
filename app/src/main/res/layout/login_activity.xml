@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+
+
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome"
+        android:textSize="35sp"
+        android:id="@+id/welcome_text"
+        android:fontFamily="@font/poppins_regular"
+        >
+
+
+    </TextView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/login_message"
+        android:textSize="20sp"
+
+        android:layout_below="@+id/welcome_text"
+        android:id="@+id/subtitle"
+        >
+    </TextView>
+
+
+    <EditText
+        android:id="@+id/email_text_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/subtitle"
+        android:layout_marginTop="50dp"
+        android:hint="Enter email"
+        android:inputType="textEmailAddress"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        android:minHeight="48dp">
+
+    </EditText>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/email_text_edit"
+        android:id="@+id/password_box"
+>
+        <EditText
+            android:paddingTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter password"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+
+            android:id="@+id/password_text_edit"
+            android:inputType="textPassword"
+
+            >
+
+    </EditText>
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/password_box"
+        android:text="Submit"
+        android:layout_marginTop="50dp"
+        android:filterTouchesWhenObscured="true"
+        android:id="@+id/submit_button"
+
+        android:textSize="15sp"
+        >
+
+    </Button>
+
+
+</RelativeLayout>
