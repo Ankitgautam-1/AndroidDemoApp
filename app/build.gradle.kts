@@ -44,11 +44,17 @@ dependencies {
     implementation(libs.navigation.ui)
     implementation(libs.navigation.runtime)
     implementation(libs.volley)
+    implementation(libs.legacy.support.v4)
+    implementation(libs.lifecycle.livedata.ktx)
+    implementation(libs.lifecycle.viewmodel.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation ("com.squareup.okhttp3:logging-interceptor:4.10.0")
+    implementation ("androidx.compose.material3:material3:1.2.1")
+    implementation ("androidx.compose.material3:material3-window-size-class:1.2.1")
+    implementation ("androidx.compose.material3:material3-adaptive-navigation-suite:1.3.0-rc01")
 
 }

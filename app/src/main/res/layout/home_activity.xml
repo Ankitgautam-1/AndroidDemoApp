@@ -4,32 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
 
 
     >
-    <ListView
-        android:id="@+id/todoList"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
 
-    <ProgressBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/progressBar"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <FrameLayout
+        android:layout_width="0dp"
+        android:id="@+id/mainScreen"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNav"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5">
+        app:layout_constraintVertical_bias="0.5" />
 
-    </ProgressBar>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/bottomNav"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        android:layout_height="wrap_content">
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            app:labelVisibilityMode="unlabeled"
+            android:id="@+id/bottomNavigationBar"
+            android:layout_width="wrap_content"
+            android:animateLayoutChanges="true"
+            android:layout_height="wrap_content"
+            app:itemIconTint="@color/blue_500"
+            app:menu="@menu/bottom_nav_bar"
+            />
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
